@@ -1,0 +1,50 @@
+@use 'sass:math';
+@use 'vuetify';
+
+$fontFamily: "Roboto";
+
+$minWidth: 320;
+$maxWidth: 1920;
+
+$maxWidthContainer: 1580;
+$containerPadding: 80;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+@import 'icons';
+@import 'vars';
+@import 'null';
+
+body {
+  color: $grey-color-900;
+  font-size: 18px;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: $containerWidth + px;
+  margin: 0 auto;
+  padding: 0 math.div($containerPadding, 2) + px;
+}
+
+@mixin section-block-inner {
+  padding: 100px 0;
+}
+
+._container-fluid {
+  padding: 0 math.div($containerPadding, 2) + px;
+}
+
+@import 'ui';
+@import 'main';
+
+.page {
+  flex: 1 1 auto;
+}

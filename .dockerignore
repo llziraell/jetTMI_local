@@ -1,0 +1,15 @@
+tests
+nginx
+.env
+.gitattributes
+.gitignore
+.dockerignore
+.editorconfig
+.eslintrc.cjs
+.prettierrc
+.idea
+README.md
+docker-compose.yml
+docker-compose-database.yml
+Dockerfile
+php.ini

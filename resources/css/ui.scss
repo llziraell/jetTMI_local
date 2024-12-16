@@ -1,0 +1,122 @@
+@use 'sass:math';
+@import './vars';
+
+@mixin text-h1 {
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $black-color;
+}
+
+@mixin text-h1--title {
+  @include text-h1;
+  margin-bottom: 20px;
+  color: $black-color;
+}
+
+@mixin text-h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $black-color;
+}
+
+@mixin text-h3 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $black-color;
+}
+
+@mixin text-body-1 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.78;
+  color: $black-color;
+
+  &--medium {
+    font-weight: 500;
+  }
+}
+
+@mixin text-pre-title {
+  color: transparent;
+  text-transform: none;
+  background: linear-gradient(to right, rgba(45, 69, 108, 1) 0%,rgba(19, 36, 54, 1) 100%);
+  background-clip: text;
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 26px;
+  text-rendering: geometricPrecision;
+  caret-color: black;
+  text-decoration: none;
+  letter-spacing: 0.13px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin text-body-1--medium {
+  @include text-body-1;
+  font-weight: 500;
+}
+
+@mixin text-linear-gradient {
+  color: transparent;
+  text-transform: none;
+  background: linear-gradient(to right, rgba(121, 169, 237, 1) 0%, rgba(51, 89, 146, 1) 100%);
+  background-clip: text;
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: break-spaces;
+  text-rendering: geometricPrecision;
+  caret-color: black;
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+    url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+    url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+.v-btn {
+  min-height: 60px;
+  border-radius: 29.5px !important;
+  min-width: 182px !important;
+  text-transform: none !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  box-shadow: none !important;
+  letter-spacing: 0 !important;
+
+  &--primary-flat {
+    background-color: $blue-color-500 !important;
+    color: $white-color;
+
+    &[type='submit'] {
+      color: $white-color;
+    }
+  }
+}
