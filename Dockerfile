@@ -47,8 +47,8 @@ RUN cp .env.example .env
 RUN php artisan key:generate
 
 RUN npm install \
-    && npm run build \
-    && npm prune --production
+    && npm run build
+#    && npm prune --production
 
 RUN chmod +x /var/www/html/entrypoint.sh
 
